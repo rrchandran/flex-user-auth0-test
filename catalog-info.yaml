@@ -1,0 +1,29 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: tt-testdeployment
+  description: "Repository created by Backstage"
+  annotations:
+    buildkite.com/project-slug: twilio/twilio-internal-tt-testdeployment
+    jira/project-key: replace-me
+    pagerduty.com/service-id: replace-me
+    twilio.com/email: team_testable-twilio@twilio.com
+    twilio.com/ldap-group: team_testable-twilio
+    twilio.com/security-tier: green
+    twilio.com/service-tier: t5
+    twilio.com/slack-channel-name: replace-me
+
+  links:
+    - url: "https://www.github.com/twilio-internal/tt-testdeployment"
+      title: "Application Repository"
+    - url: "https://www.github.com/twilio-internal/tt-testdeployment-deploy"
+      title: "Deployment Repository"
+    - url: "https://www.buildkite.com/twilio/twilio-internal-tt-testdeployment"
+      title: "Buildkite Pipeline"
+spec:
+  type: service
+  lifecycle: experimental
+  owner: group:team_testable-twilio
+  system: system:default/test-system
+
